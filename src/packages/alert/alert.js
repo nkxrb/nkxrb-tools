@@ -1,3 +1,3 @@
 export default function (val) {
-  alert(val)
+  alert(`alert:${val}`)
 }

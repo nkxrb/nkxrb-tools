@@ -23,10 +23,21 @@
 //   }
 // }));
 
-import * as alert from '../packages/alert/alert.js'
-import * as button from '../packages/button/button.js'
+// import Alert from 'packages/alert/alert.js'
+import BudButton from './packages/button/index.js'
 
-export {
-  alert,
-  button
-}  
+const components = {
+  // Alert,
+  BudButton
+}
+
+const install = function (Vue) {
+  Vue.createApp({ components: components }).mount('body')
+}
+
+// 自动注册组件
+if (typeof window !== 'undefined' && window.Vue) {
+  install(window.Vue);
+}
+
+export default install
