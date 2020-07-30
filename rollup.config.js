@@ -26,10 +26,11 @@ export default [
   // browser-friendly UMD build
   {
     input: 'src/index.js',
-    output: {
-      file: 'lib/index.js',
-      format: 'iife'
-    },
+    output: [
+      { file: pkg.main, format: 'cjs' },
+      { file: pkg.unpkg, format: 'iife' },
+      { file: pkg.module, format: 'es' }
+    ],
     plugins: [
       resolve({ extensions: ['.vue'] }),
       commonjs(),
@@ -38,7 +39,7 @@ export default [
       json(),
       postcss({
         plugins: [autoprefixer, cssnano],
-        extract: 'lib/css/bundle.css' // 输出路径
+        extract: 'dist/script/budgiant.css' // 输出路径
       }),
       eslint({
         throwOnError: true,

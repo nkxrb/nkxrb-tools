@@ -23,11 +23,9 @@
 //   }
 // }));
 
-// import Alert from 'packages/alert/alert.js'
 import BudButton from './packages/button/index.js'
 
 const components = {
-  // Alert,
   BudButton
 }
 
@@ -41,3 +39,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default install
+
+export {
+  BudButton
+}
