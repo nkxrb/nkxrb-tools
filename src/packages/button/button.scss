@@ -1,0 +1,15 @@
+*[class^="k-button-"]{
+  height: 48px;
+}
+
+.k-button-default{
+  border: 1px solid #ddd;
+  background-color: #fff;
+  color: #333;
+}
+
+.k-button-primary{
+  border: 1px solid #1890ff;
+  background-color: #75aee4;
+  color: #fff;
+}
