@@ -1,8 +1,12 @@
 import { ComponentOptions } from 'vue'
 
-import KButton from '/@packages/button/button.vue'
+import KButton from '/@packages/button/Button.vue'
+import KHeader from '/@packages/header/Header.vue'
+import KMenu from '/@packages/menu/Menu.vue'
 
 const components: ComponentOptions[] = [
+  KHeader,
+  KMenu,
   KButton
 ]
 
@@ -17,5 +21,6 @@ const register = function (app: ComponentOptions) {
 export default register
 
 export {
-  KButton
+  KButton,
+  KHeader
 }
