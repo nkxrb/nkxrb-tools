@@ -1,13 +1,13 @@
 import { ComponentOptions } from 'vue'
 
-import KButton from '/@packages/button/Button.vue'
-import KHeader from '/@packages/header/Header.vue'
-import KMenu from '/@packages/menu/Menu.vue'
+import Button from '/@packages/button/button.vue'
+import Header from '/@packages/header/header.vue'
+import Nav from '/@packages/nav/nav.vue'
 
 const components: ComponentOptions[] = [
-  KHeader,
-  KMenu,
-  KButton
+  Header,
+  Nav,
+  Button
 ]
 
 // vue3.0的组件全局注册方法
@@ -21,6 +21,7 @@ const register = function (app: ComponentOptions) {
 export default register
 
 export {
-  KButton,
-  KHeader
+  Header,
+  Nav,
+  Button
 }

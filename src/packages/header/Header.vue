@@ -11,10 +11,16 @@ export default {
 <style lang="scss" scoped>
 .k-header {
   display: flex;
-  background-color: #000;
   align-items: center;
-  padding: 0 12px;
+  background-color: #000;
+  padding: 0 24px;
   height: 48px;
-  box-shadow: 2px 1px 6px 0px #fff;
+  border-bottom: 1px solid #fff;
+  // box-shadow: 2px 1px 6px 0px #fff;
+}
+@media screen and (max-width: 786px) {
+  .k-header {
+    padding: 0 12px;
+  }
 }
 </style>

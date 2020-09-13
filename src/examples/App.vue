@@ -1,16 +1,25 @@
 <template>
-  <!-- 根据路由跳转 -->
+  <!-- 通用导航头部 -->
   <k-header>
-    <div style="width: 200px; height: 48px;line-height:48px;">
-      <img style="height: 80%" src="./assets/logo.png" />
+    <!-- logo -->
+    <div class="logo">
+      <img src="./assets/logo.png" />
     </div>
-    <k-menu :data="menuList"></k-menu>
+
+    <!-- 顶部导航 -->
+    <k-nav :data="navList">
+      <!-- 此处演示自定义导航插槽 -->
+      <template v-slot="scope">
+        <i class="icon">icon</i>
+        <span>{{scope.item.name}}</span>
+      </template>
+    </k-nav>
+
+    <!-- 换肤、语言选择 -->
+
   </k-header>
-  <k-button type="primary" @click="fnOne">主要按钮</k-button>
-  <k-button type="default">默认按钮</k-button>
-  <k-button type="link">链接按钮</k-button>
-  <k-button type="text">文本按钮</k-button>
-  <k-button type="dash">虚线按钮</k-button>
+
+  <!-- 路由对应的页面 -->
   <router-view></router-view>
 </template>
 
@@ -21,20 +30,25 @@ export default {
     const fnOne = (e) => {
       console.log(111)
     }
-    const menuList = [
-      { id: 1, name: '首页', path: '/home' },
+    const navList = [
+      { id: 1, name: '首页', path: '/' },
       {
-        id: 2, name: '组件', path: '/components', children: [
-          { id: 21, name: '按钮', path: '/button' },
-          { id: 22, name: '头部', path: '/header' },
-          { id: 23, name: '菜单', path: '/menu' }
+        id: 2, name: '文档', path: '/doc', children: [
+          { id: 21, name: '指南' }
+        ]
+      },
+      {
+        id: 3, name: '组件', path: '/components', children: [
+          { id: 31, name: '按钮', path: '/button' },
+          { id: 32, name: '头部', path: '/header' },
+          { id: 33, name: '菜单', path: '/nav' }
         ]
       }
     ]
 
     return {
       fnOne,
-      menuList
+      navList
     }
   }
 } 
@@ -47,14 +61,16 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #fff;
-  background-color: #333;
+  background-color: #000;
   min-height: 100vh;
 
   .logo {
     width: 200px;
     height: 48px;
+    display: flex;
+    align-items: center;
     img {
-      height: 100%;
+      height: 24px;
     }
   }
 }
