@@ -27,7 +27,7 @@
     background-color: #000;
     top: 42px;
     left: 0;
-    animation: ani-down 1.5s;
+    animation: ani-down .5s;
 
     li {
       display: list-item;
@@ -43,12 +43,9 @@
 @keyframes ani-down {
   0% {
     opacity: 0;
-    transform: translateY(-42px);
   }
 
   100% {
     opacity: 1;
-    // height: 42px;
-    transform: translateY(0);
   }
 }

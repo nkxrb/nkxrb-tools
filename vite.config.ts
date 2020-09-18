@@ -1,4 +1,5 @@
 module.exports = {
+  base: './',
   port: 3000,
   hostname: 'localhost',
   open: false,

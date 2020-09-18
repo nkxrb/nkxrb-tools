@@ -10,7 +10,6 @@
     <k-nav :data="navList">
       <!-- 此处演示自定义导航插槽 -->
       <template v-slot="scope">
-        <i class="icon">icon</i>
         <span>{{scope.item.name}}</span>
       </template>
     </k-nav>
@@ -55,6 +54,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import "./assets/icon/icon.css";
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
