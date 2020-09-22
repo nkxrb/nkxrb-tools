@@ -1,6 +1,13 @@
+[class^="icon-"] {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
 .icon-github {
   content: url("./assets/icon/github.svg");
-  width: 16px;
-  height: 16px;
-  color: red;
+}
+
+.icon-gitee {
+  content: url("./assets/icon/gitee.svg");
 }

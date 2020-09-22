@@ -19,7 +19,9 @@
   </k-header>
 
   <!-- 路由对应的页面 -->
-  <router-view></router-view>
+  <main>
+    <router-view></router-view>
+  </main>
 </template>
 
 <script>
@@ -54,6 +56,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import "./assets/css/reset.scss";
+@import "./assets/css/textshadow.css";
 @import "./assets/icon/icon.css";
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -63,15 +67,24 @@ export default {
   color: #fff;
   background-color: #000;
   min-height: 100vh;
+  main {
+    min-height: calc(100vh - 49px);
 
-  .logo {
-    width: 200px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    img {
-      height: 24px;
-    }
+    // 解决子类第一个元素设置margin-top时 边距重叠问题
+    box-sizing: border-box;
+    padding: 1px;
+  }
+}
+</style>
+
+<style  lang="scss" scoped>
+.logo {
+  width: 200px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  img {
+    height: 24px;
   }
 }
 </style>

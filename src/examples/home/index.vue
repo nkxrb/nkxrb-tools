@@ -2,21 +2,27 @@
   <div class="home">
     <!-- logo -->
     <div class="logo">
-      <span>KVIEW</span>
+      <span class="color-logo text-outline">KVIEW</span>
     </div>
 
     <!-- 特性概括 -->
     <div class="feature">
-      <h1>简洁、高效</h1>
+      <span style="color: #ff9b00;">简洁</span>
+      <span> | </span>
+      <span style="color: #b7f557;">高效</span>
     </div>
 
     <!-- start -->
     <div class="start">
-      <button>开始</button>
-      <button>GITEE</button>
-      <button>
+      <k-button type="text">开始-></k-button>
+      <k-button type="text">
+        <div class="icon-gitee"></div>
+        <div class="">GITEE</div>
+      </k-button>
+      <k-button type="text">
         <div class="icon-github"></div>
-      </button>
+        <div>GITHUB</div>
+      </k-button>
     </div>
   </div>
 </template>
@@ -36,12 +42,31 @@ export default {
   color: red;
 }
 .home {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   height: 100%;
   .logo {
-    font-size: 80px;
+    margin: 15vh 20px 30px;
+    font-size: 8rem;
+  }
+  .color-logo {
+    color: #000;
+  }
+  .feature {
+    font-size: 30px;
+    margin: 25px;
+  }
+  .start {
+    display: flex;
+    justify-content: center;
+    button {
+      margin: 15px;
+      div {
+        height: 32px;
+        display: inline-block;
+        line-height: 32px;
+        margin: 0 6px;
+        color: #333;
+      }
+    }
   }
 }
 </style>
