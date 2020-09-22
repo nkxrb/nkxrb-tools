@@ -1,5 +1,5 @@
 <template>
-  <header class="k-header">
+  <header class="k-header"> 
     <slot></slot>
   </header>
 </template>
