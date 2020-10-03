@@ -1,5 +1,5 @@
 <template>
-  <header class="k-header"> 
+  <header class="k-header">
     <slot></slot>
   </header>
 </template>
@@ -12,11 +12,11 @@ export default {
 .k-header {
   display: flex;
   align-items: center;
-  background-color: #000;
+  background-color: #fff;
   padding: 0 24px;
   height: 48px;
-  border-bottom: 1px solid #fff;
-  // box-shadow: 2px 1px 6px 0px #fff;
+  // border-bottom: 1px solid #d9d9d9;
+  box-shadow: 2px 1px 6px 0px #666;
 }
 @media screen and (max-width: 786px) {
   .k-header {

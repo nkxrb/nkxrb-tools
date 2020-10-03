@@ -1,15 +1,36 @@
-*[class^="k-button-"]{
+*[class^="k-button-"] {
   height: 48px;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-.k-button-default{
+a,
+button:focus {
+  outline: none;
+}
+
+.k-button-default {
   border: 1px solid #ddd;
   background-color: #fff;
   color: #333;
 }
 
-.k-button-primary{
-  border: 1px solid #1890ff;
-  background-color: #75aee4;
+.k-button-text {
+  border: 0;
+  background-color: unset;
+  color: #333;
+
+  &:hover {
+    color: #00a6ac;
+  }
+}
+
+.k-button-primary {
+  border: 1px solid #00c6f8;
+  background-color: #24f8ff;
   color: #fff;
+
+  &:hover {
+    background-color: #00e1e9;
+  }
 }

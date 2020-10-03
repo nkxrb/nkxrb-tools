@@ -24,14 +24,14 @@
   .k-nav-item {
     position: absolute;
     width: max-content;
-    background-color: #000;
+    border: 1px solid #999;
+    background-color: #fff;
     top: 42px;
     left: 0;
     animation: ani-down .5s;
 
     li {
       display: list-item;
-      color: #fff;
 
       &:hover {
         box-shadow: 0px 0px 4px 1px #5feef3;

@@ -1,6 +1,7 @@
 <template>
   <button :class="classes">
-    <i v-if="icon" :class="`k-icon ${icon}`"></i>
+    <i v-if="icon"
+       :class="`k-icon ${icon}`"></i>
     <span v-if="$slots.default">
       <slot></slot>
     </span>
@@ -12,7 +13,7 @@ export default {
   props: {
     type: { type: String, default: "default" },
     icon: { type: String },
-    status: { type: String, default: "info" },
+    status: { type: String },
   },
   setup(props, { attrs, emit, slots }) {
     // 选择性绑定class

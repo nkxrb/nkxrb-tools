@@ -6,6 +6,7 @@
 
 .icon-github {
   content: url("./assets/icon/github.svg");
+  fill: red;
 }
 
 .icon-gitee {

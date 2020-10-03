@@ -1,20 +1,25 @@
 <template>
   <!-- 通用导航头部 -->
-  <k-header>
+  <k-header class="kv-header">
     <!-- logo -->
     <div class="logo">
       <img src="./assets/logo.png" />
     </div>
-
-    <!-- 顶部导航 -->
-    <k-nav :data="navList">
-      <!-- 此处演示自定义导航插槽 -->
-      <template v-slot="scope">
-        <span>{{scope.item.name}}</span>
-      </template>
-    </k-nav>
-
-    <!-- 换肤、语言选择 -->
+    <div class="right">
+      <!-- 顶部导航 -->
+      <k-nav :data="navList">
+        <!-- 此处演示自定义导航插槽 -->
+        <template v-slot="scope">
+          <span>{{scope.item.name}}</span>
+          <i class=""></i>
+        </template>
+      </k-nav>
+      <!-- 换肤、语言选择 -->
+      <div>
+        <k-button type="text">语言</k-button>
+        <k-button type="text">主题</k-button>
+      </div>
+    </div>
 
   </k-header>
 
@@ -34,7 +39,7 @@ export default {
     const navList = [
       { id: 1, name: '首页', path: '/' },
       {
-        id: 2, name: '文档', path: '/doc', children: [
+        id: 2, name: '学习', path: '/doc', children: [
           { id: 21, name: '指南' }
         ]
       },
@@ -64,8 +69,8 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #fff;
-  background-color: #000;
+  color: #333;
+  background-color: #fff;
   min-height: 100vh;
   main {
     min-height: calc(100vh - 49px);
@@ -78,13 +83,20 @@ export default {
 </style>
 
 <style  lang="scss" scoped>
-.logo {
-  width: 200px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  img {
-    height: 24px;
+.kv-header {
+  justify-content: space-between;
+  .logo {
+    width: 200px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    img {
+      height: 24px;
+    }
+  }
+  .right {
+    display: flex;
+    align-items: center;
   }
 }
 </style>
