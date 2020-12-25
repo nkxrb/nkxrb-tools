@@ -1,5 +1,3 @@
-.vscode
-
 dist
 .DS_Store
 node_modules
@@ -8,4 +6,3 @@ temp
 explorations
 TODOs.md
 *.log
-package-lock.json
