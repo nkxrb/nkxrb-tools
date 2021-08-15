@@ -1,40 +1,26 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "outDir": "dist",
-    "sourceMap": false,
-    "target": "esnext",
-    "module": "esnext",
-    "strict": true,
-    "jsx": "preserve",
-    "importHelpers": true,
-    "moduleResolution": "node",
-    "experimentalDecorators": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "types": [
-      "node"
-    ],
-    "paths": {
-      "@/*": [
-        "src/*"
-      ]
-    },
+    "target": "ESNext",
     "lib": [
-      "esnext",
-      "dom",
-      "dom.iterable",
-      "scripthost"
-    ]
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
+    "allowJs": false,
+    "skipLibCheck": false,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "preserve"
   },
   "include": [
-    "src/examples/**/*.ts",
-    "src/packages/**/*.ts",
-    "src/examples/**/*.vue",
-    "src/packages/**/*.vue",
-    "tests/**/*.ts",
-    "tests/**/*.tsx"
+    "./src"
   ],
   "exclude": [
     "node_modules"
