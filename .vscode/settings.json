@@ -12,7 +12,6 @@
   },
   "eslint.validate": [
     "javascript",
-    "html",
     "vue"
   ],
   "editor.tabSize": 2, //tab时等于两个空格缩进
