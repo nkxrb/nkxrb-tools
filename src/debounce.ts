@@ -4,17 +4,20 @@
  * @param intervalTime 延迟时间
  * @returns 返回一个新函数
  */
+
 const debounce = (fn: Function, intervalTime: number): Function => {
-  let timerId = null
+  let timerId: NodeJS.Timeout | undefined
   let flag = false
   return function (this: any, ...args: Array<any>) {
     let _self = this
-    if (!flag) {
-      timerId = setTimeout(function () {
+    if (timerId) {
+      timerId && clearTimeout(timerId)
+      timerId = setTimeout(() => {
         fn.apply(_self, args)
         flag = false
+        timerId && clearTimeout(timerId)
+        timerId = undefined
       }, intervalTime)
-      flag = true
     }
   }
 }

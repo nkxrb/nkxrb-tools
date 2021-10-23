@@ -1,21 +1,27 @@
 # nkxrb tools
-开发各种实用组件，支持vue2.x、vue3.x、react16以上、原生js。并使用rollup、vite、webpack三种打包方式
-具体实现方式，可以切换分支查看
+开发各种实用工具Utils。使用vite + typescript打包，使用方便，类型提示更友好
 
-## 当前分支-master
-已原生JS方式实现组件，打包方式采用rollup
-已完成的组件有：
-- drag: 自由拖拽div容器（支持PC、移动端）
-- 
+
+
+## 已完成的工具有：
+
+| 函数名               | 参数                                                         | 返回值 | 说明                             |
+| -------------------- | ------------------------------------------------------------ | ------ | -------------------------------- |
+| listenElResize       | el: HTMLElement, fn: (entry?: ResizeObserverEntry) => void   | --     | 监听指定Div宽高变化              |
+| removeListenElResize | el: HTMLElement（注意，此参数需要和添加监听的el为同一个对象） | --     | 移除该Div上的大小监听事件        |
+| largePlus            | a: string, b: string                                         | string | 两个可能超过number存储的整数相加 |
+| getTextWidth         | text: string, font: string = 'blod 12px Arial'        | number | 计算一段文字在浏览器中的宽度     |
+|                      |                                                              |        |                                  |
+
+  
 
 
 ### 使用到的技术
-- 语言环境 nodejs  12.18.2
+- 语言环境 nodejs  12.18.2 / 部分工具仅适用于浏览器客户端（因为要使用到window、document内置对象）
 - 类型推导 typescript 
-- 前置依赖 vue  ^3.x
-- 打包工具 rollup 
+- 打包工具 vite
 - 测试工具 jest 
-- 兼容配置 babel （暂不考虑，后面会补上）
+- 兼容配置 babel （IE11 + 谷歌）
 
 ### 目录结构
 - docs 说明文档
