@@ -24,12 +24,9 @@
 - 兼容配置 babel （IE11 + 谷歌）
 
 ### 目录结构
-- docs 说明文档
-- examples 使用样例
-- libs 最终的打包文件目录
-- packages UI库源码根目录
-- plugins 使用到的插件
-- test 测试文件
+- \__test__ 测试文件
+- example 使用样例
+- lib 最终的打包文件目录
 - .eslintrc.js 代码格式约束文件
 - .gitignore git提交忽略文件
 - package.json 基本信息、执行命令、依赖包配置文件
