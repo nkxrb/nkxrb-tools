@@ -1,22 +1,27 @@
 {
-  "name": "kview-ui",
-  "version": "0.0.1",
-  "description": "A vue.js 3.0 UI for web/app",
-  "main": "dist/budgiant/kview-ui.js",
-  "unpkg": "dist/budgiant/kview-ui.min.js",
-  "module": "dist/budgiant/kview-ui.esm.js",
+  "name": "nkxrb-tools",
+  "version": "0.0.3",
+  "private": false,
+  "author": "nkxrb",
+  "description": "a tool for js",
+  "main": "lib/nkxrb-tools.umd.js",
+  "module": "lib/nkxrb-tools.es.js",
+  "types": "lib/src/index.d.ts",
   "directories": {
     "doc": "docs",
     "test": "test"
   },
   "scripts": {
-    "test": "node scripts/build.js vue -f global -d && jest --runInBand",
+    "test": "vite build --mode=production && jest",
     "dev": "vite --mode=development",
     "build": "vite build --mode=production"
   },
   "prepublishOnly": "npm run build",
   "files": [
-    "dist"
+    "lib",
+    "example",
+    "__test__",
+    "src"
   ],
   "repository": {
     "type": "git",
@@ -24,24 +29,25 @@
   },
   "keywords": [
     "nkxrb tools",
-    "UI"
+    "javascript",
+    "typescript"
   ],
-  "author": "nkxrb",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/nkxrb/tools/issues"
   },
-  "homepage": "https://github.com/nkxrb/tools#readme",
   "engines": {
     "node": ">=12.0.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "resize-observer-polyfill": "^1.5.1"
+  },
   "devDependencies": {
-    "@types/lodash-es": "^4.17.4",
-    "@types/node": "^14.10.1",
+    "@types/lodash": "^4.14.175",
     "jest": "^27.0.6",
     "lodash": "^4.17.21",
-    "lodash-es": "^4.17.21",
-    "typescript": "^4.3.5"
+    "typescript": "^4.3.5",
+    "vite": "^2.5.0",
+    "vite-plugin-dts": "^0.8.3"
   }
 }
