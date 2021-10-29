@@ -5,4 +5,4 @@
  * @returns 返回一个新函数
  */
 declare const throttle: (fn: Function, intervalTime: number) => Function;
-export default throttle;
+export { throttle };

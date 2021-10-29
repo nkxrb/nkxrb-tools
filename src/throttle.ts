@@ -19,4 +19,4 @@ const throttle = (fn: Function, intervalTime: number): Function => {
   }
 }
 
-export default throttle
+export { throttle }

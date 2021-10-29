@@ -22,4 +22,4 @@ function largePlus(a: string, b: string): string {
   return res.reverse().join('')
 }
 
-export default largePlus
+export { largePlus }

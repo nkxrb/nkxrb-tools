@@ -1,19 +1,35 @@
-const { debounce } = require('../lib/nkxrb-common.umd.js')
+import { debounce } from '../src/debounce'
 
 test('test debounce', (done) => {
-  let count = 0
-  function printA () {
-    count++
-  }
-  const delayPrintA = debounce(printA, 300, { 'maxWait': 300 })
+  let myCount = 0
+  let myVal = ''
 
-  let timer = setInterval(delayPrintA, 100)
+  const delayIncrease = debounce(val => {
+    myCount++
+    myVal = val
+  }, 32)
 
   setTimeout(() => {
-    clearInterval(timer)
-    expect(count).toBe(6);
+    delayIncrease('a')
+    delayIncrease('b')
+    delayIncrease('c')
+    expect(myCount).toBe(0)
+    expect(myVal).toEqual('')
+  }, 100)
+
+  setTimeout(() => {
+    delayIncrease('d')
+    expect(myCount).toBe(1)
+    expect(myVal).toEqual('c')
+    delayIncrease('e')
+    delayIncrease('f')
+  }, 200)
+
+  setTimeout(() => {
+    expect(myCount).toBe(2)
+    expect(myVal).toEqual('f')
     done();
-  }, 1000)
+  }, 300)
 })
 
 

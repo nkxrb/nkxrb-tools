@@ -7,19 +7,13 @@
 
 const debounce = (fn: Function, intervalTime: number): Function => {
   let timerId: NodeJS.Timeout | undefined
-  let flag = false
+  let res: any = undefined
   return function (this: any, ...args: Array<any>) {
-    let _self = this
-    if (timerId) {
-      timerId && clearTimeout(timerId)
-      timerId = setTimeout(() => {
-        fn.apply(_self, args)
-        flag = false
-        timerId && clearTimeout(timerId)
-        timerId = undefined
-      }, intervalTime)
-    }
+    timerId && clearTimeout(timerId)
+    timerId = setTimeout(() => {
+      res = fn.apply(this, args)
+    }, intervalTime)
   }
 }
 
-export default debounce
+export { debounce }

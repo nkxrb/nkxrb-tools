@@ -1,6 +1,6 @@
 import ResizeObserver from 'resize-observer-polyfill'
 import throttle from 'lodash/throttle'
-
+console.log(ResizeObserver)
 const addResizeObserverEl = (() => {
   const fnMap = new Map()
   const ro = new ResizeObserver((entries: ResizeObserverEntry[]) => {

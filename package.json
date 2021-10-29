@@ -1,6 +1,6 @@
 {
   "name": "nkxrb-tools",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "private": false,
   "author": "nkxrb",
   "description": "a tool for js",
@@ -12,7 +12,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "vite build --mode=production && jest",
+    "test": "jest --maxWorkers=1",
     "dev": "vite --mode=development",
     "build": "vite build --mode=production"
   },
@@ -43,9 +43,15 @@
     "resize-observer-polyfill": "^1.5.1"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.175",
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-typescript": "^7.15.0",
+    "@types/jest": "^27.0.2",
+    "@types/lodash-es": "^4.17.5",
+    "babel-jest": "^27.3.1",
     "jest": "^27.0.6",
-    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
+    "ts-jest": "^27.0.7",
     "typescript": "^4.3.5",
     "vite": "^2.5.0",
     "vite-plugin-dts": "^0.8.3"

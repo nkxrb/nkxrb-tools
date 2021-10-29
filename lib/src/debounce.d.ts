@@ -5,4 +5,4 @@
  * @returns 返回一个新函数
  */
 declare const debounce: (fn: Function, intervalTime: number) => Function;
-export default debounce;
+export { debounce };
