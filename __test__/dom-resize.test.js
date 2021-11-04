@@ -1,4 +1,4 @@
-import { listenElResize, removeListenElResize } from '../src/dom-resize'
+import { listenElResize, removeListenElResize } from '../src/domResize'
 
 const { ResizeObserver } = window;
 
